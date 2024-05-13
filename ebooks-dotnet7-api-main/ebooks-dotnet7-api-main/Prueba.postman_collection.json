@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "0d5c00b4-593e-47b0-abc4-3e88db6e0708",
+		"name": "Prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33648419"
+	},
+	"item": [
+		{
+			"name": "CreateEBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 1,\r\n    \"Title\": \"titulo\",\r\n    \"Author\": \"autor\",\r\n    \"Genre\": \"ola\",\r\n    \"Format\": \"EBook\",\r\n    \"Price\": 0,\r\n    \"IsAvailable\": true,\r\n    \"Stock\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api}}/ebook/",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"ebook",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteEBook",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api}}/ebook/1",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"ebook",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api",
+			"value": "http://localhost:5000/api",
+			"type": "string"
+		}
+	]
+}
